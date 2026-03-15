@@ -423,64 +423,7 @@
     .social-card-handle { font-size: 0.85rem; color: var(--muted); }
     .social-list { display: flex; flex-direction: column; gap: 1rem; }
 
-    /* ── CONTACT ── */
-    #contact {
-      padding: 6rem 5rem;
-      background: linear-gradient(to bottom, var(--darker), #0e0b07);
-      border-top: 1px solid rgba(201,169,122,0.1);
-    }
-    .contact-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 5rem; align-items: start;
-    }
-    .contact-intro .section-title { margin-bottom: 1.5rem; }
-    .contact-intro p { font-size: 1.1rem; color: var(--muted); line-height: 1.8; }
-    .contact-deco {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 5rem;
-      color: rgba(201,169,122,0.08);
-      line-height: 1;
-      margin-top: 2rem;
-    }
-    .form-group { margin-bottom: 1.5rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    label {
-      display: block;
-      font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      color: var(--sand);
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    input, textarea {
-      width: 100%;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(201,169,122,0.2);
-      color: var(--cream);
-      font-family: 'EB Garamond', serif;
-      font-size: 1rem;
-      padding: 0.85rem 1rem;
-      outline: none;
-      transition: border-color 0.3s;
-    }
-    input:focus, textarea:focus { border-color: var(--sand); }
-    textarea { resize: vertical; min-height: 120px; }
-    .btn-submit {
-      font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      background: var(--sand);
-      color: var(--darker);
-      border: none;
-      padding: 1rem 2.5rem;
-      cursor: pointer;
-      transition: background 0.3s;
-      width: 100%;
-    }
-    .btn-submit:hover { background: var(--sand-lt); }
+
 
     /* ── FOOTER ── */
     footer {
@@ -565,7 +508,7 @@
       .story-aside { position: static; }
       .connect-inner { grid-template-columns: 1fr; }
       .contact-inner { grid-template-columns: 1fr; }
-      #story, #connect, #contact, footer { padding: 4rem 2rem; }
+      #story, #connect, footer { padding: 4rem 2rem; }
       #quote { padding: 6rem 2rem; background-attachment: scroll; }
     }
   </style>
@@ -579,7 +522,6 @@
     <a href="#home">Home</a>
     <a href="#story">My Story</a>
     <a href="#book">Book</a>
-    <a href="#contact">Inquiries</a>
   </div>
   <div class="nav-socials">
     <!-- Instagram -->
@@ -601,18 +543,7 @@
 <section id="home">
   <div class="hero-image-col">
     <div class="hero-photo-frame">
-      <!--
-        REPLACE THIS with your photo:
-        Delete the .hero-photo-placeholder div below
-        and add: <img src="images/emma.jpg" alt="Emma Stefania" />
-      -->
-      <div class="hero-photo-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-        <span>YOUR PHOTO HERE</span>
-        <span style="font-size:0.55rem; opacity:0.6">Replace in the HTML</span>
-      </div>
+        <img src="images/emma.jpg" alt="Emma Stefania" />
     </div>
   </div>
 
@@ -630,24 +561,12 @@
   <div class="book-bg-art"></div>
   <div class="book-content">
     <div class="book-cover">
-      <!--
-        REPLACE THIS with your book cover image:
-        Delete everything inside .book-cover and add:
-        <img src="images/still-human-cover.jpg" alt="Still Human book cover"
-             style="width:100%;height:100%;object-fit:cover;" />
-      -->
-      <div class="book-cover-rose">🌹</div>
-      <div class="book-cover-title">Still<br>Human</div>
-      <div class="book-cover-sub">A Collection of Poems</div>
-      <div class="book-cover-author">Emma Stefania</div>
+      <img src="images/still-human-cover.jpg" alt="Still Human book cover" style="width:100%;height:100%;object-fit:cover;" />
     </div>
     <div class="book-info">
       <p class="book-eyebrow">Debut Poetry Collection</p>
       <h2 class="book-headline">Get My Debut<br>Poetry Book</h2>
-      <!--
-        UPDATE THE HREF BELOW with your IngramSpark / shop link
-      -->
-      <a href="#" class="btn-gold">Shop Now</a>
+      <a href="YOUR-SHOP-LINK-HERE" class="btn-gold">Shop Now</a>
     </div>
   </div>
 </section>
@@ -721,48 +640,7 @@
   </div>
 </section>
 
-<!-- ══ CONTACT ══ -->
-<section id="contact">
-  <div class="contact-inner">
-    <div class="contact-intro">
-      <p class="section-label">Get in Touch</p>
-      <h2 class="section-title">Inquiries</h2>
-      <p>Whether you have a question, a collaboration in mind, or simply want to connect — I'd love to hear from you.</p>
-      <div class="contact-deco">✉</div>
-    </div>
-    <form
-      action="https://formspree.io/f/YOUR_FORM_ID"
-      method="POST"
-    >
-      <!--
-        FORMSPREE SETUP (free):
-        1. Go to https://formspree.io and create a free account
-        2. Create a new form — it gives you a form ID
-        3. Replace YOUR_FORM_ID in the action URL above
-        That's it! No backend needed.
-      -->
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="first_name" required />
-        </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="last_name" required />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Submit</button>
-    </form>
-  </div>
-</section>
+
 
 <!-- ══ FOOTER ══ -->
 <footer>
@@ -778,15 +656,6 @@
   <div class="modal">
     <button class="modal-close" onclick="document.getElementById('privacy-modal').classList.remove('open')">×</button>
     <h2>Privacy Policy</h2>
-
-    <h3>Emails</h3>
-    <p>When you submit a message via the Website's contact form, I collect the following personal information:</p>
-    <ul>
-      <li>First Name</li>
-      <li>Last Name</li>
-      <li>Email Address</li>
-    </ul>
-    <p>This information is collected solely so that we can respond to your inquiry.</p>
 
     <h3>Analytics</h3>
     <p>This website uses Google Analytics to collect personal data such as pages visited, time spent on pages, device type and browser information, and general geographic location (not exact address). Google Analytics uses cookies and similar technologies. Its data collection is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's privacy policies</a>.</p>
