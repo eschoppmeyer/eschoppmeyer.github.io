@@ -18,6 +18,7 @@
       --dark:    #2e2820;
       --darker:  #1c1812;
       --cream:   #f5efe4;
+      --cream-dk:#e8d9c0;
       --text:    #e8dcc8;
       --muted:   #9e8f78;
     }
@@ -58,10 +59,10 @@
       text-decoration: none;
       transition: color 0.3s;
     }
-    .nav-links a:hover { color: var(--sand); }
+    .nav-links a:hover { color: var(--cream); }
     .nav-socials { display: flex; gap: 1.2rem; }
     .nav-socials a { color: var(--muted); transition: color 0.3s; }
-    .nav-socials a:hover { color: var(--sand); }
+    .nav-socials a:hover { color: var(--cream); }
     .nav-socials svg { width: 18px; height: 18px; fill: currentColor; }
 
     /* ── HERO ── */
@@ -70,7 +71,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      background: linear-gradient(135deg, #2a1f0e 0%, #3d2d18 40%, #4a3520 60%, #2e2010 100%);
+      background: linear-gradient(135deg, #1c1812 0%, #2e2010 30%, #3d2d18 55%, #2a1f0e 80%, #1c1812 100%);
       padding-top: 80px;
       position: relative;
       overflow: hidden;
@@ -78,7 +79,7 @@
     #home::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 60% 50%, rgba(201,169,122,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 60% 45%, rgba(245,239,228,0.06) 0%, transparent 60%), radial-gradient(ellipse at 25% 60%, rgba(201,169,122,0.08) 0%, transparent 50%);
     }
     .hero-image-col {
       display: flex; justify-content: center; align-items: center;
@@ -130,7 +131,7 @@
       font-family: 'Cinzel', serif;
       font-size: 0.7rem;
       letter-spacing: 0.35em;
-      color: var(--sand);
+      color: var(--cream);
       text-transform: uppercase;
       margin-bottom: 1.2rem;
     }
@@ -157,13 +158,13 @@
       font-size: 0.7rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--sand);
-      border: 1px solid var(--sand);
+      color: var(--cream);
+      border: 1px solid rgba(245,239,228,0.5);
       padding: 0.85rem 2.2rem;
       text-decoration: none;
       transition: background 0.3s, color 0.3s;
     }
-    .btn-outline:hover { background: var(--sand); color: var(--darker); }
+    .btn-outline:hover { background: var(--cream); color: var(--darker); }
 
     /* ── BOOK BANNER ── */
     #book {
@@ -197,20 +198,15 @@
     .book-cover {
       flex-shrink: 0;
       width: 200px; height: 280px;
-      background: linear-gradient(160deg, #1a1208 0%, #2e2010 50%, #4a3520 100%);
-      border: 1px solid rgba(201,169,122,0.3);
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center; padding: 1.5rem;
-      box-shadow: 4px 4px 30px rgba(0,0,0,0.6);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.7);
       position: relative;
+      border: 1px solid rgba(201,169,122,0.5);
+      overflow: hidden;
     }
-    .book-cover::before {
-      content: '';
-      position: absolute; left: 0; top: 0; bottom: 0;
-      width: 8px;
-      background: linear-gradient(to right, #a07845, #c9a97a, #a07845);
-    }
+    .book-cover::before { display: none; }
     .book-cover-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2rem;
@@ -312,7 +308,7 @@
       font-family: 'Cinzel', serif;
       font-size: 0.7rem;
       letter-spacing: 0.3em;
-      color: var(--sand-lt);
+      color: var(--cream);
       text-transform: uppercase;
       text-shadow: 0 1px 8px rgba(0,0,0,0.8);
     }
@@ -321,12 +317,13 @@
     #story {
       padding: 7rem 5rem;
       max-width: 1100px; margin: 0 auto;
+      position: relative;
     }
     .section-label {
       font-family: 'Cinzel', serif;
       font-size: 0.65rem;
       letter-spacing: 0.4em;
-      color: var(--sand);
+      color: var(--cream);
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
@@ -338,7 +335,7 @@
       line-height: 1.1;
       margin-bottom: 3rem;
     }
-    .section-title em { font-style: italic; color: var(--sand); }
+    .section-title em { font-style: italic; color: var(--sand-lt); }
     .story-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -354,20 +351,20 @@
     .story-text p:last-child { margin-bottom: 0; }
     .story-aside {
       padding: 3rem;
-      border: 1px solid rgba(201,169,122,0.25);
-      background: rgba(201,169,122,0.04);
+      border: 1px solid rgba(245,239,228,0.15);
+      background: rgba(245,239,228,0.03);
       position: sticky; top: 100px;
     }
     .story-aside-quote {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       font-size: 1.5rem;
-      color: var(--sand-lt);
+      color: var(--cream);
       line-height: 1.5;
       margin-bottom: 1.5rem;
     }
     .story-aside hr {
-      border: none; border-top: 1px solid rgba(201,169,122,0.25);
+      border: none; border-top: 1px solid rgba(245,239,228,0.12);
       margin-bottom: 1.5rem;
     }
     .story-aside p {
@@ -379,8 +376,10 @@
     /* ── SOCIALS ── */
     #connect {
       padding: 5rem;
-      background: var(--darker);
-      border-top: 1px solid rgba(201,169,122,0.1);
+      background: linear-gradient(to bottom, #1c1812, #241a10);
+      border-top: 1px solid rgba(245,239,228,0.08);
+      position: relative;
+      overflow: hidden;
     }
     .connect-inner {
       max-width: 1100px; margin: 0 auto;
@@ -403,8 +402,8 @@
       transition: border-color 0.3s, background 0.3s;
     }
     .social-card:hover {
-      border-color: var(--sand);
-      background: rgba(201,169,122,0.05);
+      border-color: rgba(245,239,228,0.4);
+      background: rgba(245,239,228,0.04);
     }
     .social-icon {
       width: 44px; height: 44px;
@@ -412,7 +411,7 @@
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .social-icon svg { width: 22px; height: 22px; fill: var(--sand); }
+    .social-icon svg { width: 22px; height: 22px; fill: var(--cream); }
     .social-card-name {
       font-family: 'Cinzel', serif;
       font-size: 0.75rem;
@@ -496,6 +495,8 @@
     .modal ul { padding-left: 1.2rem; }
     .modal a { color: var(--sand); }
 
+
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
@@ -541,6 +542,7 @@
 
 <!-- ══ HERO ══ -->
 <section id="home">
+
   <div class="hero-image-col">
     <div class="hero-photo-frame">
       <img src="emma.jpg" alt="Emma Stefania" />
@@ -569,7 +571,7 @@
       <!--
         UPDATE THE HREF BELOW with your IngramSpark / shop link
       -->
-      <a href="#" class="btn-gold">Shop Now</a>
+      <a href="https://www.barnesandnoble.com/w/still-human-emma-stefania/1148355643" class="btn-gold">Shop Now</a>
     </div>
   </div>
 </section>
@@ -583,6 +585,7 @@
 
 <!-- ══ MY STORY ══ -->
 <section id="story">
+
   <p class="section-label">About Emma</p>
   <h2 class="section-title">My <em>Story</em></h2>
   <div class="story-grid">
@@ -605,6 +608,7 @@
 
 <!-- ══ CONNECT / SOCIALS ══ -->
 <section id="connect">
+
   <div class="connect-inner">
     <div>
       <h2 class="connect-heading">Find Me<br>Online</h2>
@@ -659,15 +663,6 @@
   <div class="modal">
     <button class="modal-close" onclick="document.getElementById('privacy-modal').classList.remove('open')">×</button>
     <h2>Privacy Policy</h2>
-
-    <h3>Emails</h3>
-    <p>When you submit a message via the Website's contact form, I collect the following personal information:</p>
-    <ul>
-      <li>First Name</li>
-      <li>Last Name</li>
-      <li>Email Address</li>
-    </ul>
-    <p>This information is collected solely so that we can respond to your inquiry.</p>
 
     <h3>Analytics</h3>
     <p>This website uses Google Analytics to collect personal data such as pages visited, time spent on pages, device type and browser information, and general geographic location (not exact address). Google Analytics uses cookies and similar technologies. Its data collection is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's privacy policies</a>.</p>
